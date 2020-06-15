@@ -54,27 +54,26 @@ Make sure you can reach your newly provisioned VM.
 ping -c 2 192.168.xy.114
 ```
 
-If you can `ping` it, try to login:
+And make sure you can login without password:
 ```
 ssh 192.168.xy.114
 ```
-If you can login, your lab is ready.
+If you can login your lab is ready.
  
 ## 6. Ansible smoke test
 Define an Ansible inventory file:
 ```
 echo 'server1 ansible_host=192.168.xy.144' > ~/hosts
 ```
-This creates `hosts` file at the root of your home directory with a sigle host entry.
+This creates `hosts` file at the root of your home directory with a sigle entry.
  
 See if Ansible can talk to your new VM:
 ```
 ansible -i ~/hosts -m ping all
 ```
  
-If this works, you are ready to continue with Ansible exercises.
- 
 To run an Ansible playbook:
 ```
 ansible-playbook -i ~/hosts playbook.yaml
 ```
+Of course, you need to define `playbook.yaml`.
