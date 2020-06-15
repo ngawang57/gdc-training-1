@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+#
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64"
+  config.vm.box_check_update = false
+
+  # Ansible-managed host
+  config.vm.define "managed" do |node|
+    node.vm.provider "virtualbox" do |vb|
+      vb.memory = 2048
+      vb.cpus = 1
+    end
+    node.vm.hostname = "managed.local"
+    node.vm.network "private_network", ip: "CHANGE_ME"
+    #
+    # Install Python
+    node.vm.provision "shell", inline: <<-SHELL
+      apt-get update
+      apt-get install -y python
+    SHELL
+    #
+    # Add user
+    node.vm.provision "ansible" do |ansible|
+      ansible.playbook = "add-user.yaml"
+    end
+  end
+end
