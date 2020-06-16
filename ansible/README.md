@@ -81,5 +81,6 @@ Of course, you need to define `playbook.yaml`.
 ## 7. Official Ansible documentation
 1. [Getting started](https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html)
 2. [Playbooks introduction](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html)
-3. [Full documentation](https://docs.ansible.com/ansible/latest/index.html)
-4. [Modules index](https://docs.ansible.com/ansible/latest/modules/modules_by_category.html)
+3. [Ansible YAML syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
+4. [Full documentation](https://docs.ansible.com/ansible/latest/index.html)
+5. [Modules index](https://docs.ansible.com/ansible/latest/modules/modules_by_category.html)
