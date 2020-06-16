@@ -63,7 +63,7 @@ If you can login your lab is ready.
 ## 6. Ansible smoke test
 Define an Ansible inventory file:
 ```
-echo 'server1 ansible_host=192.168.xy.144' > ~/hosts
+echo 'server1 ansible_host=192.168.xy.114' > ~/hosts
 ```
 This creates `hosts` file at the root of your home directory with a sigle entry.
  
