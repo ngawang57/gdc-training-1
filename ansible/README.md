@@ -79,6 +79,6 @@ ansible-playbook -i ~/hosts playbook.yaml
 Of course, you need to define `playbook.yaml`.
 
 ## 7. Official Ansible documentation
-1. [Getting started](https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html)
-2. [Full documentation](https://docs.ansible.com/ansible/latest/index.html)
-3. [Modules index](https://docs.ansible.com/ansible/latest/modules/modules_by_category.html)
+1. [Getting started](https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html){:target="_blank"}
+2. [Full documentation](https://docs.ansible.com/ansible/latest/index.html){:target="_blank"}
+3. [Modules index](https://docs.ansible.com/ansible/latest/modules/modules_by_category.html){:target="_blank"}
