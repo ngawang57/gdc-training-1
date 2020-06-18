@@ -8,7 +8,7 @@ This directory contains two files of interest:
 ## 1. Generate SSH Keys on the lab server
 Login to the lab server:
 ```
-ssh username@172.31.33.124
+ssh username@lab-server
 ```
 Replace `username` with your own login name.
 
@@ -18,7 +18,7 @@ ssh-keygen -t rsa -C "your-email@ddress"
 ```
 
 ## 2. Clone this repository
-Clone this repository into your home directory on the lab server `172.31.33.124`:
+Clone this repository into your home directory on the lab server:
 ```
 cd 
 git clone https://github.com/lungtendo/gdc-training
