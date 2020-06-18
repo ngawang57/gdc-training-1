@@ -35,7 +35,7 @@ Change `node.vm.network "private_network", ip: "CHANGE_ME"`<br/>
 to `node.vm.network "private_network", ip: "192.168.xy.114"`
 
 ## 4. User account for the VM
-Edit the `add-user.yaml` file and replace occurances of placeholder text `<USERNAME>` with your user name.
+Edit the `add-user.yaml` file and replace occurances of placeholder text `USERNAME` with your user name.
 
 ## 4. Provision the VMs
 In the current directory (`~/gdc-training/ansible`), run
