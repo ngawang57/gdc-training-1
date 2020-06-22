@@ -6,18 +6,39 @@ This guide walks you through setting up a highly available
 [Kubernetes](https://github.com/kubernetes/kubernetes) cluster using `kubeadm`. 
 
 ## The Lab Environment
-The resulting Kubernetes cluster will be running on VirtualBox provisioned with Vagrant and Ansible.
+The resulting Kubernetes cluster will be running on [VirtualBox](https://www.virtualbox.org/) 
+provisioned with [Vagrant](https://www.vagrantup.com/) and 
+[Ansible](https://github.com/ansible/ansible).
 This setup uses [Docker CE](https://github.com/docker/docker-ce) as the container
 [runtime](https://kubernetes.io/docs/setup/production-environment/container-runtimes) 
 and [Calico](https://docs.projectcalico.org/getting-started/kubernetes/) 
 [CNI](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/) 
 plugin for networking.
 
+All the VMs provisioned using Vagrant are based on official Ubuntu 18.04 images.
+
+## Prerequsites
+Before continuing with this guide make sure you have the following tools installed:
+- [VirtualBox](https://www.virtualbox.org/)
+- [Vagrant](https://www.vagrantup.com/)
+- [Ansible](https://github.com/ansible/ansible)
+
+In VirtualBox, create a host-only network if you don't already have one.
+
+List host-only networks:
+```
+vboxmanage list hostonlyifs
+```
+
+Create a host-only network:
+```
+vboxmanage hostonlyif create
+```
+
 ## Contents
 In order to set up the cluster, the contents of this guide should be followed 
 in the order listed below.
 
-- [Prerequisites](docs/01-prerequisites.md)
 - [Provisioning Compute Resources](02-compute-resources.md)
 - [Installing Kubernetes Dependencies](03-kube-dependenceis.md)
 - [`kubeapi` Load Balancer](04-kubeapi-lb.md)
