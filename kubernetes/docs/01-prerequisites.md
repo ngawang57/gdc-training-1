@@ -1,4 +1,4 @@
-## Prerequsites
+# Prerequsites
 Before continuing with this guide make sure you have the following tools installed:
 - [VirtualBox](https://www.virtualbox.org/)
 - [Vagrant](https://www.vagrantup.com/)

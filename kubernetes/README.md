@@ -17,6 +17,12 @@ plugin for networking.
 
 All the VMs provisioned using Vagrant are based on official Ubuntu 18.04 images.
 
+### The Lab VMs
+This lab consists of five VMs - two control plane nodes (`controller-0,1`), 
+two worker nodes (`worker-0,1`), and one `kubeapi` load balancer.
+![KubernetesCluster](images/kubernetes-cluster.png | width=800)
+
+
 ## Contents
 In order to set up the cluster, the contents of this guide should be followed 
 in the order listed below.
