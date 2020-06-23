@@ -27,3 +27,5 @@ On the local machine:
 ```
 kubectl get nodes
 ```
+
+Next: [Smoke Test](09-smoke-test.md)

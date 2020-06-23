@@ -81,3 +81,5 @@ On one of the control plane nodes, run
 ```
 kubectl get nodes
 ```
+
+Next: [Ingress Controller and Load Balancer](07-ingress-lb.md)

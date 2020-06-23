@@ -24,3 +24,5 @@ Generate SSH key pair for the local user if you don't already have one.
 ```
 ssh-keygen -t rsa -C 'your-email@domain'
 ```
+
+Next: [Provisioning Compute Resources](02-compute-resources.md)

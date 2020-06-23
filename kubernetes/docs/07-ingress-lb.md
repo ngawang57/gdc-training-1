@@ -7,3 +7,5 @@ Follow the instructions available [here](https://kubernetes.github.io/ingress-ng
 Follow the installation instructions [here](https://metallb.universe.tf/installation/#installation-by-manifest).
 
 Configuration instructions are available [here](https://metallb.universe.tf/configuration/#layer-2-configuration).
+
+Next: [Remote Access](08-remote-access.md)

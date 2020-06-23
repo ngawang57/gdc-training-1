@@ -32,3 +32,6 @@ Run `vagrant ssh <vm_name>` to login.
 
 ### Directly
 Make sure you can login directly using plain SSH on all the VMs.
+
+
+Next: [Installing Kubernetes Dependencies](03-kube-dependencies.md)

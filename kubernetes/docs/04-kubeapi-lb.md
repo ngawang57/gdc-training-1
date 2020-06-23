@@ -21,3 +21,6 @@ Once installation is complete check to make sure it is configured properly.
 nc -v lb 6443
 ```
 You can use IP address instead of `lb`.
+
+
+Next: [Bootstrapping the Cluster](05-bootstrap-cluster.md)
