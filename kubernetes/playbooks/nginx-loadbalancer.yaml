@@ -1,0 +1,44 @@
+- hosts: lbs
+  become: yes
+  tasks:
+    - name: install Nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+      notify:
+        - start nginx
+
+    - name: create directory /etc/nginx/tcpconf.d
+      file:
+        path: /etc/nginx/tcpconf.d
+        state: directory
+        mode: 0755
+
+    - name: copy load balancer config for kubernetes
+      copy:
+        src: configs/nginx-loadbalancer.conf
+        dest: /etc/nginx/tcpconf.d/kubernetes.conf
+        owner: root
+        group: root
+        mode: 0644
+
+    - name: update nginx configuration
+      blockinfile:
+        path: /etc/nginx/nginx.conf
+        block: |
+          #
+          include /etc/nginx/tcpconf.d/*;
+      notify:
+        - restart nginx
+
+  handlers:
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
+        
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
