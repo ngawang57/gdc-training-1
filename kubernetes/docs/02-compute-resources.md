@@ -16,10 +16,10 @@ In a few miutes you should have five VMs running.
 ## `/etc/hosts` Entry
 Add entries in your local `/etc/hosts` file for each of the VMs.
 ```
-192.168.XY.11  controller-0.local controller-0
-192.168.XY.12  controller-1.local controller-1
-192.168.XY.21  worker-0.local worker-0
-192.168.XY.22  worker-1.local worker-1
+192.168.XY.10  controller-0.local controller-0
+192.168.XY.11  controller-1.local controller-1
+192.168.XY.20  worker-0.local worker-0
+192.168.XY.21  worker-1.local worker-1
 192.168.XY.30 lb.local lb
 ```
 Replace `XY` or the addresses with appropriate values for your environment.
