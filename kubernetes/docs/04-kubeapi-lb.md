@@ -15,7 +15,7 @@ Review the playbook - `playbooks/nginx-loadbalancer.yaml` - before running.
 ansible-playbooks -i hosts playbooks/nginx-loadbalancer.yaml
 ```
 
-Once installation is complete check to make it is configured properly.
+Once installation is complete check to make sure it is configured properly.
 
 ```
 nc -v lb 6443
