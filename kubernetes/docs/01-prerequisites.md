@@ -19,11 +19,8 @@ Create a host-only network:
 vboxmanage hostonlyif create
 ```
 
-## User
-When provisioning VMs using Vagrant, a user is provisioned and key-based 
-SSH authentication enabled for it in each of the VMs using Ansible provisioner.
-This user needs to be defined by editing the attached
-[playbook](../playbooks/add-user.yaml). Refer [here](../../ansible/README.md).
-
-The user provisioning the cluster should have a SSH key pair generated in
- `$HOME/.ssh` directory.
+## SSH Key Pair
+Generate SSH key pair for the local user if you don't already have one.
+```
+ssh-keygen -t rsa -C 'your-email@domain'
+```
