@@ -30,7 +30,7 @@ in the order listed below.
 - [Prerequisites](docs/01-prerequisites.md)
 - [Provisioning Compute Resources](docs/02-compute-resources.md)
 - [Installing Kubernetes Dependencies](docs/03-kube-dependenceis.md)
-- [`kubeapi` Load Balancer](docs/04-kubeapi-lb.md)
+- [`kube-apiserver` Load Balancer](docs/04-kubeapi-lb.md)
 - [Bootstrapping the Cotroller Plane](docs/05-bootstrap-controllers.md)
 - [Bootstrapping the Worker Nodes](docs/06-bootstrap-workers.md)
 - [Ingress Controller and Load Balancer](docs/07-ingress-lb.md)
