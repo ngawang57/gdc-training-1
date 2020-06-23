@@ -1,7 +1,6 @@
-# Bootstrapping Control Plane Nodes
+# Bootstrapping the Cluster
 
-We will use `kubeadm` to initialize the cluster. We will not use
-Ansible here.
+We will use `kubeadm` to bootstrap the cluster. We will not use Ansible here.
 
 ## First Control Plane Node
 Login to one of the control plane nodes using SSH:
@@ -38,8 +37,8 @@ Once initialzed, follow the on-screen instructions to:
 - create a kube config for accessing cluster
 - install a Pod network
 
-#### Create kube config
-As a regular user:
+#### Kube config
+In order to access the cluster as a regular user:
 ```
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -47,7 +46,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 #### Install a Pod network
-As a regular user:
+CNI plugin for Pod network. As a regular user:
 ```
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 ```
@@ -70,10 +69,9 @@ sudo kubeadm join 192.168.XY.30:6443 \
 The `--apiserver-advertise-address` is required when you have multiple network interfaces on the node.
 
 ## Worker Nodes
-Similarly, join the worker nodes using the privided command.
-
+Similarly, join the worker nodes using the provided command.
 ```
-sudo kubeadm join 192.168.0.200:6443 \
+sudo kubeadm join 192.168.XY.30:6443 \
   --token 9vr73a.a8uxyaju799qwdjv \
   --discovery-token-ca-cert-hash sha256:7c2e69131a36ae2a042a339b33381c6d0d43887e2de83720eff5359e26aec866
 ```
