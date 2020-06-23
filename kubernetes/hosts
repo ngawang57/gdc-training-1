@@ -1,0 +1,13 @@
+[controllers]
+controller-0.local ansible_host=192.168.XY.10
+controller-1.local ansible_host=192.168.XY.11
+
+[workers]
+worker-0.local ansible_host=192.168.XY.20
+worker-1.local ansible_host=192.168.XY.21
+
+[lbs]
+lb.local ansible_host=192.168.XY.30
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
