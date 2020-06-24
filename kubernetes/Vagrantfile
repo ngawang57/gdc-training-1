@@ -49,7 +49,7 @@ Vagrant.configure("2") do |config|
 
   # Ansible provisioner to add user
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "playbooks/add-user.yml"
+    ansible.playbook = "playbooks/add-user.yaml"
     ansible.groups = {
       "controllers" => ["controller-[0:1]"],
       "workers" => ["worker-[0:1]"],
