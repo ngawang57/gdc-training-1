@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 #
-NETWORK_PREFIX = "192.168.XY."
+NETWORK_PREFIX = "192.168.77."
 CONTROLLER_IP_START = 10
 WORKER_IP_START = 20
 LOAD_BALANCER_IP = 30
